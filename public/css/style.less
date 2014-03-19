@@ -1,8 +1,11 @@
 @codeColor: #468DA5;
 @codeBg : rgb(245, 243, 243);
-.border-radius(r){
+@font-family : "Droid Sans", "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+
+.border-radius(r) {
 
 }
+
 body {
 	padding: 50px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -25,9 +28,9 @@ blockquote {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
-	font-size: 13px;
-	line-height: 18px;
+	font-family: @font-family;
+	font-size: 14px;
+	line-height: 20px;
 	color: #737373;
 	background-color: white;
 	margin: 10px 13px 10px 13px;
@@ -152,13 +155,13 @@ pre {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	background-color: @codeBg;
-}
 
-pre code {
-	background-color: @codeBg;
-	color: @codeColor;
-	font-size: 11px;
-	padding: 0;
+	code {
+		background-color: @codeBg;
+		color: @codeColor;
+		font-size: 11px;
+		padding: 0;
+	}
 }
 
 sup {
@@ -172,7 +175,7 @@ sup {
 }
 
 @media screen and (max-width: 768px) {
-	body{
+	body {
 		padding: 10px;
 	}
 }
@@ -183,7 +186,6 @@ sup {
 		margin: 10px auto;
 	}
 }
-
 
 @media print {
 	body, code, pre code, h1, h2, h3, h4, h5, h6 {
