@@ -1,6 +1,7 @@
 path = require("path")
+express = require("express")
 
-module.exports = (app, express)->
+module.exports = (app)->
 	appDir = path.resolve __dirname, '..'
 
 	# all environments
@@ -12,9 +13,9 @@ module.exports = (app, express)->
 	app.use express.json()
 	app.use express.urlencoded()
 	app.use express.methodOverride()
-	app.use app.router
 	app.use require("less-middleware")(path.join(appDir, "public"))
 	app.use express.static(path.join(appDir, "public"))
+	app.use app.router
 
 	# development only
 	app.use express.errorHandler()  if "development" is app.get("env")
