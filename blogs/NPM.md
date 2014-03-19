@@ -27,7 +27,7 @@ Don't you think this is painful to install everytime all the required modules fo
 	..
 	..
 	
-After few interactive questions it will generate a json like 
+After few interactive questions it will generate the json file with contents
 
 	{
 	  "name": "MyNodePrjt",

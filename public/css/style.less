@@ -1,6 +1,8 @@
 @codeColor: #468DA5;
 @codeBg : rgb(245, 243, 243);
+.border-radius(r){
 
+}
 body {
 	padding: 50px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -131,8 +133,8 @@ code, pre {
 }
 
 code {
-	background-color: #fee9cc;
-	color: rgba(0, 0, 0, 0.75);
+	background-color: @codeBg;
+	color: @codeColor;
 	padding: 1px 3px;
 	font-size: 12px;
 	-webkit-border-radius: 3px;
@@ -169,12 +171,19 @@ sup {
 	-webkit-print-color-adjust: exact;
 }
 
-@media screen and (min-width: 914px) {
+@media screen and (max-width: 768px) {
+	body{
+		padding: 10px;
+	}
+}
+
+@media screen and (min-width: 954px) {
 	body {
 		width: 854px;
 		margin: 10px auto;
 	}
 }
+
 
 @media print {
 	body, code, pre code, h1, h2, h3, h4, h5, h6 {
@@ -185,3 +194,4 @@ sup {
 		page-break-inside: avoid;
 	}
 }
+
