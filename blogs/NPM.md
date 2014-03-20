@@ -58,3 +58,14 @@ Once this is generated everytime you are installing a new module you will need t
 	MyNodePrjt-$  npm install jade --save
 	MyNodePrjt-$  npm install jade --save-dev 		
 
+Now, if you want to install or update all the dependencies of a NodeJS project, go to the project folder in the terminal and use the below commands. All the dependencies mentioned in the **package.json** will be installed with this.
+	
+	#Install all the dependencies of the project
+	MyNodePrjt-$  npm install
+	
+	#Update all the dependencies of the project
+	MyNodePrjt-$  npm update	
+
+Lastly, to get more info you can do an **npm help** in the terminal. All the above commands listed are most frequently used ones. To get any more help on the npm commands you should do an **npm help**.  To get info on available npm packages check [npmjs][1]. 
+
+[1]:https://www.npmjs.org/
