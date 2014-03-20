@@ -35,4 +35,4 @@ Some HTML5 APIs such as the File API, Web Database API
 
 ![Flow][1]
 
-[1]:http://localhost:3000/images/browser_thread_border.png
+[1]:http://www.noplug.in/images/browser_thread_border.png
