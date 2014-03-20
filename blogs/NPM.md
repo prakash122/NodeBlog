@@ -9,7 +9,7 @@ NPM manages dependencies for a NodeJS applications. On a basic application
 	
 	MyNodePrjt-$  touch app.js
 
-Lets say that we require installing a node module called express, which is a simple MVC web framework for NodeJS. We can do that using "**npm install module_name**". Now the module will be installed for this project. If you need to make a global installation you will need to add a parameter **-g**
+Lets say that we require installing a node module called express, which is a simple MVC web framework for NodeJS. We can do that using `npm install module_name`. Now the module will be installed for this project. If you need to make a global installation you will need to add a parameter `-g`
 	
 	MyNodePrjt-$  npm install express 
 	MyNodePrjt-$  npm install -g express 
@@ -66,6 +66,6 @@ Now, if you want to install or update all the dependencies of a NodeJS project, 
 	#Update all the dependencies of the project
 	MyNodePrjt-$  npm update	
 
-Lastly, to get more info you can do an **npm help** in the terminal. All the above commands listed are most frequently used ones. To get any more help on the npm commands you should do an **npm help**.  To get info on available npm packages check [npmjs][1]. 
+Lastly, to get more info you can do an `npm help` in the terminal. All the above commands listed are most frequently used ones. To get info on available npm packages check [npmjs][1]. 
 
 [1]:https://www.npmjs.org/
