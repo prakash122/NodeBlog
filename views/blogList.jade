@@ -1,5 +1,12 @@
 extends ./layouts/layout
 
 block content
-	.mardown-content
-		|!{data}
+	h1 Blog Posts on NodeJS
+	hr
+	.blog-list
+
+		each file in data
+			a.blog-item(href=file.link)
+				| #{file.name}
+
+

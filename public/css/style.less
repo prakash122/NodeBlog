@@ -1,9 +1,12 @@
 @codeColor: #468DA5;
 @codeBg : rgb(245, 243, 243);
 @font-family : "Droid Sans", "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+@code-font-family : Monaco, Andale Mono, Courier New, monospace;
 
 .border-radius(r) {
-
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
 body {
@@ -132,7 +135,7 @@ blockquote p {
 }
 
 code, pre {
-	font-family: Monaco, Andale Mono, Courier New, monospace;
+	font-family: @code-font-family;
 }
 
 code {
@@ -197,3 +200,15 @@ sup {
 	}
 }
 
+.blog-item{
+	border: 1px solid #eee;
+	padding: 10px;
+	background: @codeBg;
+	display: block;
+	padding-left: 50px;
+	line-height: 2em;
+	color: @codeColor;
+	font-size: 1.2em;
+	text-decoration: none;
+	margin-bottom: 3px;
+}

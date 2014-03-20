@@ -2,13 +2,30 @@ markdown = require('markdown').markdown
 fs = require('fs')
 
 exports.list = (req, res)->
+	files = [
+		name: 'Introducing NodeJS'
+		link: 'introducing-nodejs'
+	,
+		name: 'Introducing Express'
+		link: 'introducing-express'
+	,
+		name: 'NPM'
+		link: 'NPM'
+	,
+		name: 'Jade Templates'
+		link: 'jade-templates'
+	,
+		name: 'Using CoffeeScript'
+		link: 'using-coffee'
+	,
+		name: 'Javascript Callbacks'
+		link: 'js-callbacks'
+	,
+	]
+	file.link = 'blogs/' + file.link for file in files
 
-	fs.readFile('blogs/NPM.md', 'utf8', (err, data)->
-		if err
-			res.send err.message
-		else
-			res.render 'blogList', data: markdown.toHTML(data)
-	)
+	res.render 'blogList', data: files
+
 
 exports.getBlog = (req, res)->
 	blogName = req.params.name
