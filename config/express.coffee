@@ -6,7 +6,7 @@ module.exports = (app)->
 
 	# all environments
 	app.set "port", process.env.PORT or 3000
-	app.set "views", path.join(appDir, "views")
+	app.set "views", path.join(appDir, "app", "views")
 	app.set "view engine", "jade"
 	app.use express.favicon()
 	app.use express.logger("dev")

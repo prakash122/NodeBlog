@@ -1,0 +1,62 @@
+@import "variables";
+
+nav.navbar {
+	background-color: #378;
+	border-radius:0;
+	top: 0;
+	left: 0;
+	margin:0;
+	li{
+		a{
+			color: white;
+		}
+	}
+	.pic-section{
+		width: 100%;
+		text-align: center;
+		margin: 10px 0;
+		img{
+			width: 150px;
+			height: 150px;
+			background-color: #ffffff;
+		}
+	}
+}
+@media screen and (min-width : 1024px) {
+	//	Make the nav bar left
+	nav.navbar{
+		height: 100%;
+		max-width: 500px;
+		min-width: 350px;
+		width: 35%;
+		float: left;
+		.pic-section{
+			margin: 100px auto;
+		}
+	}
+	#content-wrapper{
+		overflow-y: scroll;
+		height: 100%;
+		padding: 0 2%;
+	}
+}
+
+@media screen and (max-width : 1023px) {
+//	Make the nav bar top
+
+	nav.navbar{
+		width: 100%;
+		li{
+			display: inline-block;
+			margin: 10px 50px;
+		}
+	}
+
+	#content-wrapper{
+
+		padding-top: 50px;
+		width: 80%;
+		margin-left: 10%;
+	}
+
+}

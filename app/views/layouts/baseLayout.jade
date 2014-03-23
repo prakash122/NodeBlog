@@ -7,16 +7,13 @@ html
 		meta(name='description', content='')
 		meta(name='author', content='Prakash Kumar')
 
+		script(type = 'type/javascript', src='/javascripts/bootstrap.js')
 
+		link(rel='stylesheet', href='/css/bootstrap.min.css')
 		link(rel='stylesheet', href='/css/style.css')
 		link(href='http://fonts.googleapis.com/css?family=Droid+Sans', rel='stylesheet', type='text/css')
 
 		block scripts
 	body
 		#wrapper
-			include ../controls/topBar
-			include ../controls/leftBar
-			#page-wrapper
-				//include ./controls/pageInfo
-				block content
-
+			block layout-content

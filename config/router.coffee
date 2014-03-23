@@ -1,4 +1,4 @@
-blog = require('../routes/blog')
+blog = require('../app/routes/blog')
 
 
 module.exports = (app)->
