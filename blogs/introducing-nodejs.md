@@ -22,7 +22,7 @@ Install your node platform from [NodeJS website][3]
 ##Node Command Line
 Node installation gives a command line utility. Any javascript code can be executed here. For example
 
-	~$ node
+	~$node
 	> 10 + 2 * 2
 	14
 	> var a = 5
@@ -64,7 +64,7 @@ The below code is will create a basic web server taken from a NodeJS site
 
 Copy the above contents to the file **app.js**. Run the node server with the command line utility as below.
 
-	MyNodeProject-$ node app.js
+	MyNodeProject-$node app.js
 	Server running at http://127.0.0.1:1337/
 
 Open your browser and navigate to [**http://127.0.0.1:1337**](http://127.0.0.1:1337) or [**http://localhost:1337**](http://localhost:1337), you will see "**Hello World**".

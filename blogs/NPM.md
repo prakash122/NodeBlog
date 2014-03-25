@@ -2,28 +2,32 @@
 ***
 
 
-NPM manages dependencies for a NodeJS applications. On a basic application
+NPM manages dependencies for a NodeJS applications. NPM gets installed with NodeJS when installing with an installer or you can install with a single line.
 
-	~$ mkdir MyNodePrjt
-	~$ cd MyNodeProject
+	~$curl http://npmjs.org/install.sh | sh
+
+Lets start from scratch with a basic application
+
+	~$mkdir MyNodePrjt
+	~$cd MyNodeProject
 	
-	MyNodePrjt-$  touch app.js
+	MyNodePrjt-$touch app.js
 
 Lets say that we require installing a node module called express, which is a simple MVC web framework for NodeJS. We can do that using `npm install module_name`. Now the module will be installed for this project. If you need to make a global installation you will need to add a parameter `-g`
 	
-	MyNodePrjt-$  npm install express 
-	MyNodePrjt-$  npm install -g express 
+	MyNodePrjt-$npm install express
+	MyNodePrjt-$npm install -g express
 
 If you are particular about certain version of the module
 
-	MyNodePrjt-$  npm install express@1.0.4 		
+	MyNodePrjt-$npm install express@1.0.4
 For uninstalling a module
 	
-	MyNodePrjt-$  npm uninstall express 
+	MyNodePrjt-$npm uninstall express
 
 Don't you think this is painful to install everytime all the required modules for your project when ever you change your system or for your colleague who is working on the same repository using GIT or SVN! To solve this like all other package managers we have a configuration file named **package.json**. In fact, you don't need to take the pain of creating the file and maintain it for every change in the dependency modules. You can create for this existing project by typing **npm init**
 
-	MyNodePrjt-$  npm init
+	MyNodePrjt-$npm init
 	..
 	..
 	
@@ -48,23 +52,23 @@ After few interactive questions it will generate the json file with contents
 
 The contents above are readable. **dependencies** section is for dependencies of the project but **devDependencies** are dependencies during the development environment where you can use advanced debugging, logging or may be simulation test modules. scripts can be executed using npm to perform tasks like start the server, run the tests, things to do on postInstall etc.,
 
-	#To start the server, with out concerning about the parameters you pass or file to run just run "npm start"
+To start the server, with out concerning about the parameters you pass or file to run just run `npm start`
 	
-	MyNodePrjt-$  npm start 		
-	MyNodePrjt-$  npm test
+	MyNodePrjt-$npm start
+	MyNodePrjt-$npm test
 
 Once this is generated everytime you are installing a new module you will need to use add a parameter '**--save**' to save in the dependencies and '**--save-dev**' to save in the devDependencies
 	
-	MyNodePrjt-$  npm install jade --save
-	MyNodePrjt-$  npm install jade --save-dev 		
+	MyNodePrjt-$npm install jade --save
+	MyNodePrjt-$npm install jade --save-dev
 
 Now, if you want to install or update all the dependencies of a NodeJS project, go to the project folder in the terminal and use the below commands. All the dependencies mentioned in the **package.json** will be installed with this.
 	
 	#Install all the dependencies of the project
-	MyNodePrjt-$  npm install
+	MyNodePrjt-$npm install
 	
 	#Update all the dependencies of the project
-	MyNodePrjt-$  npm update	
+	MyNodePrjt-$npm update
 
 Lastly, to get more info you can do an `npm help` in the terminal. All the above commands listed are most frequently used ones. To get info on available npm packages check [npmjs][1]. 
 

@@ -1,3 +1,7 @@
+-contentClass = ''
+if contentLayout
+	-contentClass = "only-content"
+
 doctype html
 html
 	head
@@ -7,13 +11,21 @@ html
 		meta(name='description', content='')
 		meta(name='author', content='Prakash Kumar')
 
-		script(type = 'type/javascript', src='/javascripts/bootstrap.js')
-
 		link(rel='stylesheet', href='/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/css/highlight-default.css')
 		link(rel='stylesheet', href='/css/style.css')
+
 		link(href='http://fonts.googleapis.com/css?family=Droid+Sans', rel='stylesheet', type='text/css')
 
+		script(type='text/javascript', src='/js/ext/jQuery.js')
+		script(type='text/javascript', src='/js/ext/bootstrap.js')
+		script(type='text/javascript', src='/js/ext/highlight.pack.js')
+
 		block scripts
-	body
+
+	body(class=contentClass)
 		#wrapper
 			block layout-content
+
+		script.
+			hljs.initHighlightingOnLoad();

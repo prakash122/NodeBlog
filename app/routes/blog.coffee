@@ -24,7 +24,7 @@ exports.list = (req, res)->
 	]
 	file.link = 'blogs/' + file.link for file in files
 
-	res.render 'blogList', data: files
+	res.render 'blogList', data: filesf, contentLayout : true
 
 
 exports.getBlog = (req, res)->
@@ -37,5 +37,7 @@ exports.getBlog = (req, res)->
 		if err
 			res.send err.message
 		else
-			res.render 'blogView', data: markdown.toHTML(data)
+			res.render 'blogView', data: markdown.toHTML(data), contentLayout : true
 	)
+
+

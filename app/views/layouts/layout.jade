@@ -1,8 +1,12 @@
 extends baseLayout
 
 block layout-content
-	include ../controls/navBar
-	#content-wrapper
+	-contentClass = ''
+	if contentLayout
+		-contentClass = "only-content"
+	else
+		include ../controls/navBar
+	#content-wrapper(class=contentClass)
 		//include ./controls/pageInfo
 		block content
 
