@@ -117,6 +117,8 @@ All the static files which should be publicly accessable can be served using `ex
 	//Setting a prefix value
 	app.use('/static', express.static(path.join(__dirname, 'public')));
 
+Refer [SO Answer][7] for more information on static files and its order compared to router
+
 ####Router and Routes
 
 Routing of the different web request to their respective controllers will be handled by the `app.router`. If none of the above middlewares cannot address the user request then `app.router` will check all the routes registered with it and if any route matches the request url then the respective callback will be called.
@@ -164,7 +166,7 @@ We can have a middleware which will always be available to handle the errors in 
 	    });
 	});
 
-As you see these are list of middlewares provided by Express but it is up to us, we can create new, delete the existing, replace with a better alternative. For Example, check [flatiron][7] for alternatives to these Express middlewares and you can use any of those middlewares replacing the ones provided by Express.
+As you see these are list of middlewares provided by Express but it is up to us, we can create new, delete the existing, replace with a better alternative. For Example, check [flatiron][8] for alternatives to these Express middlewares and you can use any of those middlewares replacing the ones provided by Express.
 
 [1]: http://www.nodeframework.com
 [2]: http://expressjs.com/guide.html
@@ -172,4 +174,5 @@ As you see these are list of middlewares provided by Express but it is up to us,
 [4]: http://noplug.in/blogs/NPM
 [5]: http://localhost:3000
 [6]: https://github.com/visionmedia/express/tree/master/examples
-[7]: http://flatironjs.org/
+[7]: http://stackoverflow.com/a/12695813/557978
+[8]: http://flatironjs.org/

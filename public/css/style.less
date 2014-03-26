@@ -147,7 +147,8 @@ pre {
 
 	display: block;
 	padding: 0 0 0 10px ;
-	margin: 0;
+	padding: 0;
+	margin: 1em 0;
 	border: 0;
 
 	line-height: 16px;
@@ -158,10 +159,10 @@ pre {
 	border-left: 3px solid @codeColor;
 	.border-radius(0);
 	code {
-		background-color: @codeBg;
+		background-color: @codeBg!important;
 		color: @codeColor;
 		font-size: @pre-code-font-size;
-		padding: 0;
+		padding: 1em!important;
 		line-height: 22px;
 	}
 }
