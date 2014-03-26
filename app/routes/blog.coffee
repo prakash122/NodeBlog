@@ -14,9 +14,7 @@ exports.list = (req, res)->
 	,
 		name: 'Jade Templates'
 		link: 'jade-templates'
-	,
-		name: 'Using CoffeeScript'
-		link: 'using-coffee'
+
 	,
 		name: 'Javascript Callbacks'
 		link: 'js-callbacks'
@@ -24,7 +22,7 @@ exports.list = (req, res)->
 	]
 	file.link = 'blogs/' + file.link for file in files
 
-	res.render 'blogList', data: filesf, contentLayout : true
+	res.render 'blogList', data: files, contentLayout : true
 
 
 exports.getBlog = (req, res)->
