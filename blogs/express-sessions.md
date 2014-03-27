@@ -94,40 +94,40 @@ Find the user with the given emailID and verify his password
 	
 Joining the pieces to a complete code. Also added few error checks if finding users throws an error.
 	
-	// controller for user login request
-	var login = function(req, res, next){
-		
-		// Fetch the post parameters from the request
-		var email = req.param('email');
-		var password = req.param('password');
-		
-		//finding single user record with email equal to email user given
-		User.findOne({email:email}, function(err, obj){
-			if(err){
-				next(err);
-			}
-			else if (!obj){
-				next(new Error('User Not found'));
-			}
-			else {
-				// if the user record's password is equal to provided 
-				// password, then we can log him in.
-				if (obj.password == password){
-					
-					// Am just showing that more info can be saved in the session
-					req.session.user = {
-						email : email
-					};
-					
-					//Adding a cookie to the 'res' object
-					res.cookie('sid', res.req.sessionID)
-					res.send({code : 1, message : 'Successful'});
-				}
-				else
-					res.send({code: 0, message: 'invalid password'});
-			}
-		});
-	}
+    // controller for user login request
+    var login = function(req, res, next){
+
+      // Fetch the post parameters from the request
+      var email = req.param('email');
+      var password = req.param('password');
+      
+      //finding single user record with email equal to email user given
+      User.findOne({email:email}, function(err, obj){
+       if(err){
+         next(err);
+       }
+       else if (!obj){
+         next(new Error('User Not found'));
+       }
+       else {
+         // if the user record's password is equal to provided
+         // password, then we can log him in.
+         if (obj.password == password){
+      
+           // Am just showing that more info can be saved in the session
+           req.session.user = {
+             email : email
+           };
+      
+           //Adding a cookie to the 'res' object
+           res.cookie('sid', res.req.sessionID)
+           res.send({code : 1, message : 'Successful'});
+         }
+         else
+           res.send({code: 0, message: 'invalid password'});
+       }
+      });
+    };
 	
 Once the you are sure the login request is successful, you can make a new call to a different route and try to log the cookies.
 
@@ -145,24 +145,24 @@ Once the you are sure the login request is successful, you can make a new call t
 Now try opening this in the browser [http://localhost:3000/dashboard][2] to see an output like
 
 	{
-		"session": {
-			"cookie": {
-				"originalMaxAge": 15552000000,
-				"expires": "2014-09-23T15:52:41.531Z",
-				"httpOnly": true,
-				"path": "/"
-			},
-			"user": {
-				"email": "prakash@noplug.in"
-			}
-		},
-		"cookies": {
-			"sid": "s:j3tJKj7MEQ42uzCluzyoBqJl.NTfXcE/Fvrb+i33cd8d9UzLMbLa6kTlGXZ/TTGwr4ns"
-		}
+	   "session": {
+		  "cookie": {
+			"originalMaxAge": 15552000000,
+			"expires": "2014-09-23T15:52:41.531Z",
+			"httpOnly": true,
+			"path": "/"
+		  },
+		  "user": {
+			"email": "prakash@noplug.in"
+		  }
+	  },
+	  "cookies": {
+		"sid": "s:j3tJKj7MEQ42uzCluzyoBqJl.NTfXcE/Fvrb+i33cd8d9UzLMbLa6kTlGXZ/TTGwr4ns"
+	  }
 	}
 
 Check [Role based responses][3] to know more about routing and customizing them.
 
 [1]: http://en.wikipedia.org/wiki/Session_(computer_science)
 [2]: http://localhost:3000/dashboard
-[3]: http://www.noplug.in/blogs/role-based-performance
+[3]: http://www.noplug.in/blogs/role-based-response
