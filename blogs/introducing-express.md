@@ -71,7 +71,7 @@ Lets the file `app.js` which is the starting point of your server. Though, there
 
 After loading the importing the required node modules, get the instance of Express server from `express()` we shall look at the following configurations
 	
-	//Letting the express know where the view ares available
+	//Letting the express know where the views are available
 	app.set('views', path.join(__dirname, 'views'));
 	
 	//Setting the view engine to jade

@@ -14,7 +14,18 @@ exports.list = (req, res)->
 	,
 		name: 'Jade Templates'
 		link: 'jade-templates'
-
+	,
+		name: 'Using MongoDb'
+		link: 'using-mongodb'
+	,
+		name: 'Express Routes Middleware'
+		link: 'express-routes'
+	,
+		name: 'Express Sessions'
+		link: 'express-sessions'
+	,
+		name: 'Role Based responses'
+		link: 'role-based-response'
 	,
 		name: 'Javascript Callbacks'
 		link: 'js-callbacks'
