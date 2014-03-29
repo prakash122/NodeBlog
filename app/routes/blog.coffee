@@ -3,20 +3,18 @@ fs = require('fs')
 
 exports.list = (req, res)->
 	files = [
+
+		name: 'Javascript Callbacks'
+		link: 'js-callbacks'
+	,
 		name: 'Introducing NodeJS'
 		link: 'introducing-nodejs'
-	,
-		name: 'Introducing Express'
-		link: 'introducing-express'
 	,
 		name: 'NPM'
 		link: 'NPM'
 	,
-		name: 'Jade Templates'
-		link: 'jade-templates'
-	,
-		name: 'Using MongoDb'
-		link: 'using-mongodb'
+		name: 'Introducing Express'
+		link: 'introducing-express'
 	,
 		name: 'Express Sessions'
 		link: 'express-sessions'
@@ -24,9 +22,16 @@ exports.list = (req, res)->
 		name: 'Role Based responses'
 		link: 'role-based-response'
 	,
-		name: 'Javascript Callbacks'
-		link: 'js-callbacks'
+		name: 'Jade Templates'
+		link: 'jade-templates'
 	,
+		name: 'Init MongoDb'
+		link: 'init-mongo'
+	,
+		name: 'Using MongoDb'
+		link: 'using-mongodb'
+
+
 	]
 	file.link = 'blogs/' + file.link for file in files
 
