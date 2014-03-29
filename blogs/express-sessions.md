@@ -54,6 +54,8 @@ If we can elaborate this, `express.session` is the middleware which will take th
 * Cookie key name to look for the sessionId and a 'secret' to validate the session key
 * Cookie attributes and expiry durations
 
+Note: A small note on the cookie configuration. The path set to '/' will send the cookie to all the routes in the site with the same host not for the sub-domain though. Expiry info says that the cookie is valid for that long which is to be managed by the server.
+
 So lets say that the client made a login request to the server and the login controller starts checking for the  credentials and if the credentials are verified save a cookie and respond to the client. Let us see the code snippet in the following steps
 
 Import mongoose which is the ORM for MongoDB, Get a handle to mongoose model. Also register the express route for login request
@@ -84,8 +86,6 @@ Find the user with the given emailID and verify his password
 			// Am just showing that more info can be saved in the session
 			req.session.user = { email : email };
 	
-			//Adding a cookie to the 'res' object
-			res.cookie('sid', res.req.sessionID);
 			res.send({code : 1, message : 'Successful'});
 		}
 		else

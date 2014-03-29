@@ -18,9 +18,6 @@ exports.list = (req, res)->
 		name: 'Using MongoDb'
 		link: 'using-mongodb'
 	,
-		name: 'Express Routes Middleware'
-		link: 'express-routes'
-	,
 		name: 'Express Sessions'
 		link: 'express-sessions'
 	,
